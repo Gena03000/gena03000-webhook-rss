@@ -1,3 +1,13 @@
+// Script simple (pseudo-code)
+fetch('https://tonrss.com/feed')
+  .then(res => analyseFlux(res))
+  .then(articles => {
+     if (visiteCouncilBluffs && referrer == "direct") {
+        déclencherNotification("Nouvel article ciblé !")
+        envoyerVersCampagnePublicitaire("localisée Iowa")
+     }
+  })
+
 if (ville === "Council Bluffs" && source === "Direct") {
   if (durée < 10s || pagesVisitées < 2) {
     botScore = 0.9
