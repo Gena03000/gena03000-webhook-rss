@@ -48,6 +48,23 @@ sessions.forEach(session => {
     }
   }
 });
+{
+  "seuil_duree": 10,
+  "seuil_pages": 2,
+  "seuil_bot": 0.5
+}
+const fs = require('fs');
+
+// Essaie d'abord de lire et parser le fichier
+let sessions = [];
+
+try {
+  const data = fs.readFileSync('./sessions.json', 'utf8');
+  sessions = JSON.parse(data);
+} catch (error) {
+  console.error("Erreur de lecture du fichier sessions.json :", error);
+}
+
 
 
 
