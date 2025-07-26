@@ -22,5 +22,32 @@ if (ville === "Council Bluffs" && source === "Direct") {
     botScore = 0.2
   }
 }
+const fs = require('fs');
+
+// Charge les visites enregistrées (fichier JSON)
+let sessions = JSON.parse(fs.readFileSync('./sessions.json'));
+
+// Définir les seuils dans un fichier config séparé
+const config = JSON.parse(fs.readFileSync('./config.json'));
+
+// Analyse les sessions une à une
+sessions.forEach(session => {
+  const { ville, source, durée, pagesVisitées } = session;
+  let botScore = 0;
+
+  if (ville === "Council Bluffs" && source === "Direct") {
+    botScore = (durée < config.seuil_duree || pagesVisitées < config.seuil_pages) ? 0.9 : 0.2;
+
+    // Action selon score
+    if (botScore > config.seuil_bot) {
+      console.log(`[BOT détecté] Session: ${JSON.stringify(session)}`);
+      // Ici tu pourrais bloquer, rediriger, logguer...
+    } else {
+      console.log(`[HUMAIN possible] Session: ${JSON.stringify(session)}`);
+      // Message ciblé ou activation de pixel de pub
+    }
+  }
+});
+
 
 
