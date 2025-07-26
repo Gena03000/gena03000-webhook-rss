@@ -91,27 +91,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
- name: Auto-update nouveautés via RSS
-
-on:
-  schedule:
-    - cron: '0 * * * *' # Toutes les heures
-
-jobs:
-  update-nouveautes:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout du repo
-        uses: actions/checkout@v4
-
-      - name: Lire le flux RSS
-        uses: nvgn/rss-action@v1
-        with:
-          url: https://genacampbell.shop/collections/nouveautes.atom
-          max_entries: 5
-
-      - name: Traitement des nouveautés
-        run: |
-          echo "Nouveautés détectées ! À toi la vitrine 💅"
-       
           
