@@ -15,4 +15,12 @@ if (ville === "Council Bluffs" && source === "Direct") {
     botScore = 0.2
   }
 }
+if (ville === "Council Bluffs" && source === "Direct") {
+  if (durée < 10s || pagesVisitées < 2) {
+    botScore = 0.9
+  } else {
+    botScore = 0.2
+  }
+}
+
 
