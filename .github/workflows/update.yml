@@ -35,15 +35,16 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           name: Auto-update nouveautés via RSS
-
 on:
   schedule:
     - cron: '0 * * * *'
-
 jobs:
   update-nouveautes:
     runs-on: ubuntu-latest
     steps:
+      ...
+
+
       - name: Checkout du repo
         uses: actions/checkout@v4
 
