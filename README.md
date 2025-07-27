@@ -7,3 +7,13 @@ gena-rss-bot-scout/
 ├─ sessions.json        ← stockage local des visites analysées
 ├─ README.md            ← explication de ton projet (branding !)
 ├─ .github/workflows/   ← dossiers pour GitHub Actions si automatisation
+my-next-app/
+├── pages/
+│   ├── index.js       // Home page
+│   ├── about.js       // About page
+│   └── api/
+│       └── hello.js   // API endpoint
+├── public/            // Static assets
+├── styles/            // CSS/Sass files
+├── next.config.js     // Next.js config
+└── package.json
