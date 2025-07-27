@@ -1,3 +1,5 @@
+![Déploiement Next.js](https://github.com/Gena03000/gena03000-webhook-rss/actions/workflows/nextjs.yml/badge.svg)
+
 ![Shopify Push](https://github.com/Gena03000/gena03000-webhook-rss/actions/workflows/shopify-push.yml/badge.svg)
 gena-rss-bot-scout/
 ├─ index.js             ← ton script principal
