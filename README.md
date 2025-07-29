@@ -4,7 +4,9 @@ gena-rss-bot-scout/
 ├─ sessions.json        ← stockage local des visites analysées
 ├─ README.md            ← explication de ton projet (branding !)
 ├─ .github/workflows/   ← dossiers pour GitHub Actions si automatisation
-my-next-app/
+├─ .github/workflows/
+│   ├─ shopify-push.yml ← push automatisé vers le thème Shopify
+│   └─ codeql.yml ← analyse de sécurité du projet JS
 ├── pages/
 │   ├── index.js       // Home page
 │   ├── about.js       // About page
